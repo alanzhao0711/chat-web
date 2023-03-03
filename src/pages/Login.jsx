@@ -19,6 +19,17 @@ const Login = () => {
       setErr(true);
     }
   };
+
+  const handleDemoSubmit = async (e) => {
+    const email = "sunny@gmail.com";
+    const password = "yunyun520";
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate("/");
+    } catch (err) {
+      setErr(true);
+    }
+  };
   return (
     <div className="formContainer">
       <div className="formWrapper">
@@ -29,6 +40,7 @@ const Login = () => {
           <input type="password" placeholder="Password" />
           <button>Sign in</button>
           {err && <span>Something went wrong</span>}
+          <button onClick={handleDemoSubmit}>Demo</button>
         </form>
         <p>
           You don't have an account? <Link to="/register">Register</Link>

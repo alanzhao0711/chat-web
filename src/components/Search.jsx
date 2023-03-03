@@ -74,12 +74,13 @@ const Search = () => {
     } catch (err) {}
 
     setUser(null);
-    setUsername("")
+    setUsername("");
   };
   return (
     <div className="search">
       <div className="searchForm">
         <input
+          style={{ fontSize: "14px" }}
           type="text"
           placeholder="Find a user"
           onKeyDown={handleKey}

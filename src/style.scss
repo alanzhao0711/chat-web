@@ -34,7 +34,6 @@
       color: #5d5b8d;
       font-weight: bold;
       font-size: 24px;
-
     }
 
     .title {
@@ -102,7 +101,7 @@
     display: flex;
     overflow: hidden;
     @include tablet {
-     width: 90%;
+      width: 90%;
     }
 
     .sidebar {
@@ -129,15 +128,20 @@
         .user {
           display: flex;
           gap: 10px;
+          align-items: center;
 
-          img {
+          .profile {
             background-color: #ddddf7;
+            height: 35px;
+            width: 35px;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+          .logout {
             height: 24px;
             width: 24px;
-            border-radius: 50%;
-            object-fit: cover;
+            cursor: pointer;
           }
-
           button {
             background-color: #5d5b8d;
             color: #ddddf7;
@@ -183,15 +187,15 @@
         }
 
         img {
-          width: 50px;
-          height: 50px;
+          width: 35px;
+          height: 35px;
           border-radius: 50%;
           object-fit: cover;
         }
 
         .userChatInfo {
           span {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 500;
           }
           p {
@@ -203,7 +207,7 @@
     }
     .chat {
       flex: 2;
-
+      overflow-y: scroll;
       .chatInfo {
         height: 50px;
         background-color: #5d5b8d;
@@ -312,7 +316,7 @@
           }
 
           button {
-            border: none;
+            border-radius: 10px;
             padding: 10px 15px;
             color: white;
             background-color: #8da4f1;
@@ -322,4 +326,8 @@
       }
     }
   }
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
